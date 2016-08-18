@@ -14,13 +14,13 @@ import java.net.URL;
  * Created by steven on 8/5/16.
  */
 public class KeycloakHelper {
-    private static final String AUTH_SERVER_URL = "http://happy-fit.base.tw:8000";
+    private static final String AUTH_SERVER_URL = "http://ec2-52-77-226-171.ap-southeast-1.compute.amazonaws.com";
     private static final String AUTHZ_URL = AUTH_SERVER_URL + "/auth";
-    private static final String AUTHZ_ENDPOINT = "/realms/demo/protocol/openid-connect/auth";
-    private static final String ACCESS_TOKEN_ENDPOINT = "/realms/demo/protocol/openid-connect/token";
-    private static final String REFRESH_TOKEN_ENDPOINT = "/realms/demo/protocol/openid-connect/token";
+    private static final String AUTHZ_ENDPOINT = "/realms/happy-fit/protocol/openid-connect/auth";
+    private static final String ACCESS_TOKEN_ENDPOINT = "/realms/happy-fit/protocol/openid-connect/token";
+    private static final String REFRESH_TOKEN_ENDPOINT = "/realms/happy-fit/protocol/openid-connect/token";
     private static final String AUTHZ_ACCOOUNT_ID = "keycloak-token";
-    private static final String AUTHZ_CLIENT_ID = "Base App Test";
+    private static final String AUTHZ_CLIENT_ID = "Happy Fit App";
     private static final String AUTHZ_REDIRECT_URL = "http://oauth2callback";
     private static final String MODULE_NAME = "KeyCloakAuthz";
 
@@ -55,7 +55,7 @@ public class KeycloakHelper {
 
             @Override
             public void onFailure(Exception e) {
-                Log.e(TAG, e.getMessage());
+                Log.e(TAG, e.getMessage(), e);
                 callback.onFailure(e);
             }
         });
