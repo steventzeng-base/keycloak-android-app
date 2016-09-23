@@ -14,7 +14,7 @@ import java.net.URL;
  * Created by steven on 8/5/16.
  */
 public class KeycloakHelper {
-    private static final String AUTH_SERVER_URL = "http://dev.happy2fit.com";
+    private static final String AUTH_SERVER_URL = "https://Prod.happy2fit.com";
     private static final String AUTHZ_URL = AUTH_SERVER_URL + "/auth";
     private static final String AUTHZ_ENDPOINT = "/realms/happy-fit/protocol/openid-connect/auth";
     private static final String ACCESS_TOKEN_ENDPOINT = "/realms/happy-fit/protocol/openid-connect/token";
